@@ -1,0 +1,66 @@
+
+
+extends layout
+
+block content
+        -tab.sort(function(a,b) {return (a.id < b.id) ? 1 : ((b.id < a.id) ? -1 : 0);});
+        #container1
+          -for(var i=0; i<tab.length ; i+=3){
+                .section
+                  if(tab[i].photo)
+                    -var photo = 'background-image:  url("data:image/png;base64,'+tab[i].photo+'"); background-position: center; background-repeat: no-repeat; background-size: cover; height: 200px;';
+                    #photo(style=photo href="/show?id="+tab[i].id)
+                  a.title(href="/show?id="+tab[i].id)=tab[i].title
+                  .text
+                    p=tab[i].shorttext
+                  p.date=tab[i].date
+                  if(login==true)
+                    a.edit(href="/edit?id="+tab[i].id)
+                      button
+                        p Edytuj
+                  
+                  a(href="/show?id="+tab[i].id) 
+                    button
+                      p Więcej
+            -}
+        #container2
+          -for(var i=1; i<tab.length ; i+=3){
+              .section
+                if(tab[i].photo)
+                  -var photo = 'background-image:  url("data:image/png;base64,'+tab[i].photo+'"); background-position: center; background-repeat: no-repeat; background-size: cover; height: 200px;';
+                  #photo(style=photo href="/show?id="+tab[i].id)
+                a.title(href="/show?id="+tab[i].id)=tab[i].title
+                .text
+                  p=tab[i].shorttext
+                p.date=tab[i].date
+                if(login==true)
+                  a.edit(href="/edit?id="+tab[i].id)
+                    button
+                      p Edytuj
+                
+                a(href="/show?id="+tab[i].id) 
+                  button
+                    p Więcej
+          -}
+        #container3
+          -for(var i=2; i<tab.length ; i+=3){
+              .section
+                if(tab[i].photo)
+                  -var photo = 'background-image:  url("data:image/png;base64,'+tab[i].photo+'"); background-position: center; background-repeat: no-repeat; background-size: cover; height: 200px;';
+                  #photo(style=photo href="/show?id="+tab[i].id)
+                a.title(href="/show?id="+tab[i].id)=tab[i].title
+                .text
+                  p=tab[i].shorttext
+                p.date=tab[i].date
+                if(login==true)
+                  a.edit(href="/edit?id="+tab[i].id)
+                    button
+                      p Edytuj
+                
+                a(href="/show?id="+tab[i].id) 
+                  button
+                    p Więcej
+           -}
+          
+      if(tab.length==0)
+        h1 BRAK POSTÓW O TAKIEJ KATEGORII

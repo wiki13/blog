@@ -1,0 +1,35 @@
+extends layout
+
+block content
+    .content
+      if(article)
+          form(method="post", action="", enctype="multipart/form-data", id="add")
+              br 
+              br
+              p Zdjęcie
+              input(type="file", name="picture", multiple)
+              br
+              br
+              input(type="submit", value="wyślij")
+              br
+              br
+              br
+              
+          textarea(form="add", name="text")=article.text
+      else
+          form(method="post", action="", enctype="multipart/form-data", id="add")
+              p Tytuł
+              input(type="text", name="title")
+              p Zdjęcie
+              input(type="file", name="picture", multiple)
+              p Kategoria
+              select(name="category")
+                option(value="DIY") DIY
+                option(value="podroze") Podróże
+                option(value="kulinarne") Kulinarne
+                option(value="inspiracje") Inspiracje
+                option(value="pasje_i_tworczosc") Pasje i twórczość
+              br
+              input(type="submit", value="wyślij")
+              
+          textarea(form="add", name="text") Treść postu

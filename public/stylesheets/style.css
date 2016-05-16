@@ -1,0 +1,330 @@
+body {
+  padding: 50px;
+  background-color: #2C3849;
+  text-align: center;
+}
+
+a{
+  color: #0e1a2b;
+  text-decoration: none;
+}
+
+.blog_title{
+    font-size: 30px;
+    color: white;
+}
+#nav{
+  position: relative;
+  margin: auto;
+}
+
+#nav>ul {
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 590px;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+#nav li {
+      float: left;
+}
+
+#nav li a {
+    display: block;
+    padding: 14px 8px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 15px;
+}
+#nav li a:hover {
+    background-color: #fff;
+    color: #2C3849 !important;
+}
+#nav .hire {
+    display: block;
+    padding: 14px 8px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+#aside{
+  position: absolute;
+  right: 0;
+  margin: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+#aside>div{
+    background: #fff;
+    padding: 1px;
+    margin: 10px;
+    border-top: 5px solid #0e1a2b;
+}
+
+.login>form>input{
+  margin: auto;
+  border: none;
+  background-color: #B6C4D9;
+  height: 30px;
+}
+
+.login button {
+  border-radius: 5px;
+  border: solid 1px #2C3849;
+  background-color: #7a889d;
+  margin: 20px;
+  width: 100px;
+}
+
+.login button:hover{
+  background-color:  #2C3849;
+}
+
+.login button:active{
+  background-color: #0e1a2b;
+}
+.login button>p{
+  color:white
+}
+
+.posts{
+  text-align: left;
+}
+
+.posts h1{
+  font-size: 20px;
+}
+
+.posts p{
+  color:grey;
+  font-size: 12px;
+}
+
+#article{
+  position: absolute;
+  right: 300px;
+  margin: 10px;
+  width: 70%;
+}
+
+#container1{
+  position: relative;
+  width: 33%;
+  float: left;
+}
+
+#container2{
+  position: relative;
+  width: 33%;
+  float: left;
+}
+
+#container3{
+  position: relative;
+  width: 33%;
+  float: left;
+}
+.section{
+  position: relative;
+  background-color: #fff;
+  float: left;
+  width: 90%;
+  margin:10px;
+}
+
+.section .title {
+  position: absolute;
+  right: 0;
+  margin: 10px;
+}
+.section:nth-child(4n+1){
+  border-top: 5px solid #EC8282;
+}
+.section:nth-child(4n+1) .title{
+  border-bottom: 2px solid #EC8282;
+}
+
+.section:nth-child(4n+2){
+  border-top: 5px solid #8282EC;
+}
+.section:nth-child(4n+2) .title{
+  border-bottom: 2px solid #8282EC;
+}
+
+.section:nth-child(4n+3){
+  border-top: 5px solid #ECE882;
+}
+.section:nth-child(4n+3) .title{
+  border-bottom: 2px solid #ECE882;
+}
+
+.section:nth-child(4n+4){
+  border-top: 5px solid #8BEC82;
+}
+.section:nth-child(4n+4) .title{
+  border-bottom: 2px solid #8BEC82;
+}
+
+.section .date {
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+  color:grey;
+  font-size: 12px;
+}
+
+.section .text{
+  position: relative;
+  top:10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 10px;
+  margin-bottom:100px;
+  margin-top:50px;
+}
+
+.section button {
+  position: absolute;
+  border-radius: 5px;
+  border: solid 1px #2C3849;
+  background-color: #7a889d;
+  margin: 20px;
+  width: 100px;
+  bottom: 0;
+  right: 0;
+}
+
+.section button:hover{
+  background-color:  #2C3849;
+}
+
+.section button:active{
+  background-color: #0e1a2b;
+}
+.section button>p{
+  color:white;
+  font-size: 12px;
+}
+.section .edit button{
+  top: 0;
+  height: 40px;
+  margin: 10px;
+  background-color: rgba(44, 56, 73, 0.5);
+}
+
+.section .edit button:hover{
+  background-color:  #2C3849;
+}
+.content {
+  margin: 10px;
+  border-top: 5px solid #0e1a2b;
+  background-color: #fff ;
+  text-align: left;
+}
+
+.content p{
+  margin: 10px;
+  margin-bottom: 20px;
+  white-space: pre-wrap;
+}
+
+.content h1 {
+  position: relative;
+  display: table;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.content .date{
+  color: gray;
+  position: relative;;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.content form{
+  margin: 10px;
+}
+
+.content textarea{
+  position: absolute;
+  margin: 20px;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 85%;
+  white-space: pre-wrap;
+}
+
+.content input[type="submit"] {
+  position: relative;;
+  border-radius: 5px;
+  border: solid 1px #2C3849;
+  background-color: #7a889d;
+  margin: 20px;
+  width: 100px;
+  height: 50px;
+  color: white;
+}
+
+.content  input[type="submit"]:hover{
+  background-color:  #2C3849;
+}
+
+.content  input[type="submit"]:active{
+  background-color: #0e1a2b;
+}
+
+.content button {
+  position: absolute;
+  border-radius: 5px;
+  border: solid 1px #2C3849;
+  background-color: #7a889d;
+  margin: 50px;
+  width: 100px;
+  bottom: 80px;
+  right: 0;
+  height: 40px;
+}
+
+.content button:hover{
+  background-color:  #2C3849;
+}
+
+.content button:active{
+  background-color: #0e1a2b;
+}
+.content button>p{
+  color:white;
+  font-size: 12px;
+}
+
+.content .edit button{
+  right: 20%;
+  background-size: contain;
+}
+
+.author{
+  border-top: 2px #2C3849 solid;
+}
+
+#photo{
+  position: relative;
+  width: 80%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

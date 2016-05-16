@@ -1,0 +1,95 @@
+-articles.sort(function(a,b) {return (a.id < b.id) ? 1 : ((b.id < a.id) ? -1 : 0);});
+-if(articles.length>10){articles.splice(9,(articles.length-11));}
+doctype html
+html
+  head
+    title=title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    #nav
+      h1.blog_title=title
+      ul.category
+        if(category!=null)
+          if(category==0)
+            li
+              a.hire(href="/list") wszystko
+          else
+            li
+              a(href="/list") wszystko
+          if(category==1)
+            li
+              a.hire(href="/list?category=pasje_i_tworczosc") pasje i twórczość
+          else
+            li
+              a(href="/list?category=pasje_i_tworczosc") pasje i twórczość
+          if(category==2)
+            li
+              a.hire(href="/list?category=kulinarne") kulinarne
+          else
+            li
+              a(href="/list?category=kulinarne") kulinarne
+          if(category==3)
+            li
+              a.hire(href="/list?category=podroze") podróże
+          else
+            li
+              a(href="/list?category=podroze") podróże
+          if(category==4)
+            li 
+              a.hire(href="/list?category=inspiracje") inspiracje
+          else
+            li 
+              a(href="/list?category=inspiracje") inspiracje
+          if(category==5)  
+            li
+              a.hire(href="/list?category=DIY") DIY
+          else
+            li
+              a(href="/list?category=DIY") DIY
+
+        else
+          li
+            a(href="/list") wszystko
+          li
+            a(href="/list?category=pasje_i_tworczosc") pasje i twórczość
+          li
+            a(href="/list?category=kulinarne") kulinarne
+          li
+            a(href="/list?category=podroze") podróże
+          li 
+            a(href="/list?category=inspiracje") inspiracje
+          li
+            a(href="/list?category=DIY") DIY
+    #aside
+      .login
+        if(login==true)
+          a(href="/add")
+            button
+              p Dodaj nowy post
+              
+          if(admin==true)
+            a(href="/newuser")
+              button
+                p Dodaj nowego użytkownika
+          br
+          a(href="/logout")
+            button
+              p Wyloguj
+            
+        else
+            form(method="post", action="", id="login")
+              p Login
+              input(type="text" name="login"  placeholder="hasło")
+              p Hasło
+              input(type="password" name="password"  placeholder="login")
+            button(form="login")
+              p Zaloguj
+      .posts
+        h1 Najnowsze posty
+        ul
+          each item in articles
+            li
+              a(href="show?id="+item.id)=item.title
+              p=item.date
+    #article
+      block content    

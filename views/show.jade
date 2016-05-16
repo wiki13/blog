@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    .content
+      h1=art.title
+      if(art.photo)
+        -var photo = 'background-image:  url("data:image/png;base64,'+art.photo+'"); background-position: center; background-repeat: no-repeat; background-size: contain; height: 400px;';
+        #photo(style=photo)
+      p=art.text
+      p.date=art.date
+      if(login==true)
+        a.edit(href="/edit?id="+art.id)
+          button
+            p Edytuj
+        a(href="/remove?id="+art.id)
+          button
+            p Usuń
+      br
+      .author
+        p Autor:
+        p=nick
+      br
